@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+*:focus {
+    outline: 0;
+}
+html, body, #app {
+    height: 100%;
+}
+body, .login--input, .login--button {
+    font: 14px 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+button {
+    cursor: pointer;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background: linear-gradient(-45deg, #aaa 25%, #eee 100%);
+    background-attachment: fixed;
+}
+
+/**
+* YOUR CODE HERE
+*/
+#app {
+    max-width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 50px;
+    max-height: 41px;
+}
+
+.login {
+    width: 36vw;
+    background: rgb(228,228,228);
+    background: linear-gradient(90deg, rgba(228,228,228,1) 0%, rgba(228,228,228,1) 0%, rgba(219,219,219,1) 100%);    
+    padding: 15px;
+
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(174,174,174,1);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(174,174,174,1);
+    box-shadow: 0px 0px 5px 2px rgba(174,174,174,1);
+
+    border-radius: 18px 0px 18px 0px;
+    -moz-border-radius: 18px 0px 18px 0px;
+    -webkit-border-radius: 18px 0px 18px 0px;
+
+    border: 0px solid #000000;
+    margin-top: 15px;
+}
+
+[class^='login--'] {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    background-color: #d2d2d2;
+    border: none;
+    border-radius: 4px;
+}
+
+.login--button{
+    color: #ffffff;
+    background-color: #008429;
+}
+
+.login--button_disabled {
+    color: #ffffff;
+    background-color: #d1d1d1;
+    cursor: not-allowed;
+}
+
+.logged form {
+    display: none;
+}
+
+.logged .container {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 700px;
+    width: 90%;
+}
+
+.li--disabled {
+    width: 100%;
+    height: 100%;
+    background-color: #c6c6c6b8;
+    position: absolute;
+    left: -5px;
+}
+
+li:hover .li--disabled {
+    display: none;
+}
+
+
+.logged .container li {
+    display: flex;
+    flex-grow: 1;
+    padding: 5px;
+    border: solid 1px #ccc;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.21);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.21);
+
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+
+    align-items: center;
+
+    position: relative;
+}
+
+.logged .container li span {
+    margin-left: 5px;
+}
+
+.logged .container li:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.41);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.41);
+
+}
+
+.logged .container li img {
+    height: 30px;
+    border-radius: 40px;
+    transition: all 0.2s ease-in-out;
+    -webkit-box-shadow: 0;
+    -moz-box-shadow: 0;
+    box-shadow: 0;
+}
+
+.logged .container li:hover img {
+    transform: scale(2);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.41);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.41);
+}
+
+@media only screen and (min-width: 560px) and (max-width: 800px) {
+    .login {
+        width: 60vw!important;
+    }
+}
+
+ @media only screen and (max-width: 997px) {
+    #app {
+        max-width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #app {
+        margin: 14% auto;
+    }
+}
